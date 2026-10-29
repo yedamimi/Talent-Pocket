@@ -150,18 +150,67 @@
 
 ## 📂 프로젝트 구조
 
+## 📂 프로젝트 구조
+
 ```text
-Talent-Pocket/
+CTM3/
 ├── app/
-│   ├── src/                  # 앱 소스 코드 및 리소스
-│   ├── build.gradle          # 앱 모듈 빌드 설정
-│   ├── proguard-rules.pro    # 코드 축소 및 난독화 규칙
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/com/example/ctm1/
+│   │   │   │   ├── MainActivity.kt           # 로그인 및 생체 인증
+│   │   │   │   ├── RegisterActivity.kt       # 회원가입
+│   │   │   │   ├── BaseActivity.kt           # 공통 Activity
+│   │   │   │   ├── HomeActivity.kt           # 메인 화면
+│   │   │   │   ├── AddPostActivity.kt        # 재능 등록
+│   │   │   │   ├── TalentDetailActivity.kt   # 재능 상세
+│   │   │   │   ├── Talent.kt                 # 재능 데이터 모델
+│   │   │   │   ├── TalentAdapter.kt          # 재능 목록 표시
+│   │   │   │   ├── TalentRepository.kt       # 재능 목록 데이터 관리
+│   │   │   │   ├── LikedActivity.kt          # 찜 목록
+│   │   │   │   ├── MyPageActivity.kt         # 마이페이지
+│   │   │   │   ├── MyPagePagerAdapter.kt     # 마이페이지 탭 연결
+│   │   │   │   ├── ProfilePageActivity.kt    # 판매자 프로필
+│   │   │   │   ├── ProfilePagerAdapter.kt    # 판매자 페이지 탭 연결
+│   │   │   │   ├── PostsFragment.kt          # 게시글 탭
+│   │   │   │   ├── PortfolioFragment.kt      # 포트폴리오 탭
+│   │   │   │   ├── Portfolio.kt              # 포트폴리오 데이터 모델
+│   │   │   │   ├── PortfolioAdapter.kt       # 포트폴리오 목록 표시
+│   │   │   │   ├── ReviewActivity.kt         # 리뷰 작성
+│   │   │   │   ├── ReviewFragment.kt         # 리뷰 탭
+│   │   │   │   ├── ReviewAdapter.kt          # 리뷰 목록 표시
+│   │   │   │   ├── ScheduleDialog.kt         # 일정 관련 다이얼로그
+│   │   │   │   ├── TimetableAdapter.kt       # 시간표 표시
+│   │   │   │   ├── ChatActivity.kt           # 채팅 화면
+│   │   │   │   ├── ChatAdapter.kt            # 채팅 메시지 표시
+│   │   │   │   ├── ChatListActivity.kt       # 채팅방 목록
+│   │   │   │   ├── ChatListAdapter.kt        # 채팅방 목록 표시
+│   │   │   │   ├── ChatMessage.kt            # 채팅 메시지 모델
+│   │   │   │   ├── ChatRoom.kt               # 채팅방 모델
+│   │   │   │   ├── NotificationActivity.kt   # 알림 화면
+│   │   │   │   └── ui/theme/                 # 테마 관련 코드
+│   │   │   ├── res/
+│   │   │   │   ├── drawable/                # 이미지 및 배경 리소스
+│   │   │   │   ├── layout/                  # XML 화면 레이아웃
+│   │   │   │   ├── mipmap-*/                # 앱 아이콘 리소스
+│   │   │   │   ├── values/                  # 문자열·색상·테마
+│   │   │   │   ├── values-night/            # 야간 테마 리소스
+│   │   │   │   └── xml/                     # XML 설정 리소스
+│   │   │   └── AndroidManifest.xml          # 앱 구성 및 권한 선언
+│   │   ├── androidTest/                     # 기기에서 실행하는 테스트
+│   │   └── test/                            # 로컬 단위 테스트
+│   ├── build.gradle.kts                     # 앱 모듈 빌드 설정
+│   ├── proguard-rules.pro                   # 코드 축소 및 난독화 규칙
 │   └── .gitignore
-├── gradle/                   # Gradle Wrapper 관련 파일
-├── build.gradle              # 프로젝트 빌드 설정
-├── settings.gradle           # 모듈 구성 설정
-├── gradlew                   # Unix 계열 Gradle 실행 스크립트
-├── gradlew.bat               # Windows Gradle 실행 스크립트
+├── gradle/
+│   ├── wrapper/                            # Gradle Wrapper
+│   ├── libs.versions.toml                   # 라이브러리 버전 관리
+│   └── gradle-daemon-jvm.properties         # Gradle Daemon JVM 설정
+├── build.gradle.kts                         # 프로젝트 빌드 설정
+├── settings.gradle.kts                      # 모듈 및 저장소 설정
+├── gradle.properties                        # Gradle 실행 설정
+├── gradlew                                  # Unix 계열 실행 스크립트
+├── gradlew.bat                              # Windows 실행 스크립트
 └── .gitignore
 ```
 
